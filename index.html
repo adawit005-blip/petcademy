@@ -6,7 +6,7 @@
     <title>Pet Academy - Professional Pet Training</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Reset and base styles **/
+        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -48,7 +48,7 @@
             transition: opacity 0.8s ease-out;
         }
         
-        .loading-video-container {
+        .loading-image-container {
             width: min(90vw, 500px);
             height: min(90vw, 500px);
             border-radius: 50%;
@@ -58,7 +58,7 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
         
-        .loading-video {
+        .loading-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -620,7 +620,7 @@
                 height: 200px;
             }
             
-            .loading-video-container {
+            .loading-image-container {
                 width: 250px;
                 height: 250px;
             }
@@ -638,19 +638,16 @@
     </style>
 </head>
 <body>
-   <!-- Loading Screen -->
-<div id="loading-screen">
-    <div class="loading-video-container">
-        <video class="loading-video" autoplay muted loop>
-            <source src="new-pet.3gp" type="video/3gp">
-            Your browser does not support the video tag.
-        </video>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-image-container">
+            <img class="loading-image" src="https://images.unsplash.com/photo-1517423738875-5ce310acd3da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1070&q=80" alt="Cute Puppy">
+        </div>
+        <div class="loading-text">Welcome to Pet Academy</div>
+        <div class="loading-subtext">Loading our premium pet services...</div>
+        <div class="loading-spinner"></div>
     </div>
-    
-    <div class="loading-text">Welcome to Pet Academy</div>
-    <div class="loading-subtext">Loading our premium pet services...</div>
-    <div class="loading-spinner"></div>
-</div>
+
     <!-- Main Content -->
     <div id="main-content">
         <!-- Header -->
@@ -853,7 +850,7 @@
             const loadingScreen = document.getElementById('loading-screen');
             const mainContent = document.getElementById('main-content');
             
-            // Show loading screen for 5 seconds, then transition to main content
+            // Show loading screen for 1 second, then transition to main content
             setTimeout(function() {
                 loadingScreen.style.opacity = '0';
                 
@@ -861,7 +858,7 @@
                     loadingScreen.style.display = 'none';
                     mainContent.style.opacity = '1';
                 }, 800); // Match the transition duration
-            }, 5000); // 5 seconds
+            }, 1000); // Changed from 5000 to 1000 (1 second)
             
             // Mobile menu functionality
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -888,11 +885,4 @@
         });
     </script>
 </body>
-
 </html>
-
-
-
-
-
-
